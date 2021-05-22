@@ -288,6 +288,163 @@ nav li {
 
 }
 
+/* Newsletter */
+#newsletter {
+  color: var(--clr-light2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+#newsletter>* {
+  /* border: 1px solid yellow; */
+  width: 100%;
+  text-align: center;
+  padding: .5rem;
+}
+
+#newsletter h2 {
+  color: var(--clr-light);
+  font-size: 30px;
+}
+
+#newsletter h3 {
+  font-size: 23px;
+}
+
+#newsletter input {
+  height: 2rem;
+}
+
+#newsletter input[type="text"] {
+  width: 28.5rem;
+  max-width: 90%;
+  padding: .5rem;
+  font-size: .8rem;
+}
+
+#newsletter input[type="button"] {
+  margin-left: .5rem;
+  font-size: .9rem;
+  padding: 0 .2rem;
+  background: var(--clr-light);
+  color: var(--clr-light2);
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 .2rem #f8d096;
+}
+
+#newsletter input[type="button"]:hover {
+  background: var(--clr-light-hover);
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  padding: 2rem 4rem 6rem 4rem;
+}
+
+.footer-cols {
+  color: var(--clr-light2);
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid seagreen; */
+}
+
+.footer-cols div {
+  /* border: 1px solid blue; */
+  flex: 0 1 15%;
+}
+
+.footer-cols> :nth-child(1) {
+  /* border: 1px solid red; */
+  flex-basis: 35%;
+}
+
+.footer-cols> :nth-child(4) {
+  /* border: 1px solid orange; */
+  flex-basis: 25%;
+}
+
+.footer-cols h2 {
+  color: var(--clr-light);
+  font-variant: all-petite-caps;
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+
+.footer-cols :is(p, ul) {
+  font-size: 18px;
+}
+
+#footer #social-media {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+#social-media>div {
+  display: flex;
+  justify-content: space-around;
+  width: 10rem;
+  margin-right: 12rem;
+}
+
+div#social-media a {
+  margin-inline: 1rem;
+}
+.icon{
+  font-size: 30px;
+  width:1em;
+  height:1em;
+  place-items:center;
+  text-align:center;
+  position:relative;
+  cursor:pointer;
+}
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  position:absolute;
+  display:grid;
+  place-items:center;
+  top:0;bottom:0;left:0;right:0;
+  border-radius:.3em;
+  color:white;
+}
+.facebook::before{
+  content: "\f39e";
+  font-size:.8em;
+  background:#3b5998;
+}
+.twitter::before{
+  content: "\f099";
+  background:#08a0e9;
+  font-size:.6em;
+}
+.pinterest::before{
+  content: "\f231";
+  font-size:.8em;
+  background: #bd081c;
+}
+.instagram::before{
+  content: "\f16d";
+  font-size:.9em;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
 /* Media queries*/
 @media (max-width:1200px) {
   .banner-text {
@@ -300,7 +457,7 @@ nav li {
   }
 }
 
-@media (max-width:1022px) {
+@media (max-width:1024px) {
   nav {
     font-size: 10px;
   }
@@ -320,12 +477,44 @@ nav li {
   #banner>div {
     margin: 1rem auto;
   }
+
+  #social-media>div{
+    margin-right: 4rem;
+  }
 }
 
 @media (min-width:740px) {
   #slideouts ul {
     opacity: 0 !important;
-    pointer-events: 'none' !important;
+    pointer-events: none;
+  }
+}
+
+@media (max-width:786px) {
+
+  #newsletter :is(h2, h3) {
+    font-size: 19px;
+  }
+
+  #newsletter input[type="text"] {
+    width: 19.5rem;
+    height: 2rem;
+    font-size: .62rem;
+  }
+
+  #newsletter input[type="button"] {
+    height: 2rem;
+    padding: 0 .4rem;
+    margin-top: 1rem;
+  }
+
+  /* Footer */
+  .footer-cols h2 {
+    font-size: 20px;
+  }
+
+  .footer-cols :is(p, ul) {
+    font-size: 15px;
   }
 }
 
@@ -369,6 +558,35 @@ nav li {
   }
 }
 
+@media (max-width:425px) {
+
+  #footer{
+    padding-left:0;
+    padding-right: 0;
+  }
+  .footer-cols {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  #footer .footer-cols>* {
+    flex-basis: 50%;
+    padding: 0 2rem 1rem 2rem;
+  }
+  #footer #social-media{
+    justify-content: center;
+  }
+  #social-media>div{
+    margin: 0;
+  }
+}
+
+@media (max-width:375px) {
+  .footer-cols>* {
+    padding-right: 0;
+  }
+}
+
 @media (max-width:360px) {
   .text-logo div {
     font-size: 1.6rem;
@@ -378,4 +596,11 @@ nav li {
     padding: 1rem;
   }
 
+}
+
+@media (max-width:320px) {
+  #footer .footer-cols>* {
+    flex-basis: 100%;
+    padding: 0 2rem 1rem 2rem;
+  }
 }
