@@ -262,11 +262,13 @@
         <h3>Si vous avez des questions ou des demanges spéciales n'hésitez pas à nous contactez en remplissant le
             formulaire ci dessous.</h3>
         <form>
-            <input type="text" name="full-name" id="full-name" placeholder="Nom & Prénom" />
-            <input type="email" name="email" id="email" placeholder="E-mail" />
-            <input type="tel" name="tel" id="tel" placeholder="Numéro de téléphone" />
+            <div id="contact-info">
+                <input type="text" name="full-name" id="full-name" placeholder="Nom & Prénom" />
+                <input type="email" name="email" id="email" placeholder="E-mail" />
+                <input type="tel" name="tel" id="tel" placeholder="Numéro de téléphone" />
+            </div>
             <textarea name="sujet" id="sujet" cols="30" rows="10" placeholder="Sujet"></textarea>
-            <input type="button" value="Envoyer" id="btn-envoyer" />
+            <button type="button" id="btn-envoyer">Envoyer</button>
         </form>
     </section>
     <section id="newsletter">
