@@ -585,7 +585,18 @@ div#social-media a {
   Laptop L - 1440px
   4k       - 2560px
 */
-
+/* Laptop L or larger*/
+@media (min-width:1440px) {
+  #faq {
+    padding: 0 25rem;
+  }
+}
+/* between Laptop and Laptop L */
+@media (min-width:1024px) and (max-width:1439px) {
+  #faq {
+    padding: 0 16rem;
+  }
+}
 /* Laptop L */
 @media (max-width:1440px) {
   .banner-text {
