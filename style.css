@@ -26,7 +26,7 @@ body {
   font-size: var(--font-size);
 }
 
-/* Banner */
+/* Banner ----------------------------------------------------------------------*/
 #banner {
   height: 100vh;
   max-height: 790px;
@@ -98,7 +98,7 @@ body {
   content: close-quote;
 }
 
-/* Navigation */
+/* Navigation ----------------------------------------------------------------------*/
 nav {
   height: 72px;
   background: var(--clr-nav);
@@ -183,7 +183,7 @@ nav li {
   justify-content: flex-end;
 }
 
-/* Contact-Message */
+/* Contact-Message ----------------------------------------------------------------------*/
 #contact-message {
   z-index: 1000;
   position: fixed;
@@ -205,7 +205,7 @@ nav li {
   background: var(--clr-dark-best-hover);
 }
 
-/* slideouts */
+/* slideouts ----------------------------------------------------------------------*/
 #slideouts {
   position: fixed;
   top: 0;
@@ -271,7 +271,147 @@ nav li {
   font-size: 16px;
 }
 
-/* Newsletter */
+/* Sections ----------------------------------------------------------------------*/
+section {
+  margin: 3rem 0 1rem 0;
+}
+
+#our-products,
+#our-history {
+  display: none;
+}
+
+/* Section: Our products */
+/* Section: Our history */
+/* Section: FAQ */
+#faq {
+  color: var(--clr-light2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8rem;
+}
+
+#faq h2 {
+  color: var(--clr-light);
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+#faq ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40rem;
+}
+
+#faq li {
+  flex-basis: 4rem;
+}
+
+#faq li h3 {
+  font-size: 19px;
+}
+
+#faq li h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Section: Contact us */
+#contact-us {
+  color: var(--clr-light2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#contact-us>* {
+  width: 50%;
+}
+
+#contact-us h2 {
+  color: var(--clr-light);
+  font-size: 30px;
+}
+
+#contact-us h3 {
+  font-size: 23px;
+}
+
+#contact-us form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#contact-info>* {
+  width: 30%;
+}
+
+#contact-info>*,
+#sujet,
+#btn-envoyer {
+  padding: .6rem;
+  font-size: 12px;
+}
+
+#contact-us :is(h2, h3),
+#contact-info,
+#sujet {
+  margin-bottom: 1rem;
+}
+
+#sujet {
+  width: 100%;
+}
+
+#btn-envoyer {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  min-width: fit-content;
+  padding-top: 0.5em;
+  text-align: center;
+  /* font-size: 1em; */
+  font-size: 15px;
+  font-variant: all-petite-caps;
+  font-weight: 900;
+  border-radius: 5px;
+  background: var(--clr-light);
+  color: var(--clr-light2);
+  border: none;
+  outline: none;
+  box-shadow: 0 0.2rem #f8d096;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#btn-envoyer:hover {
+  background: #b37e24;
+}
+
+#btn-envoyer::after {
+  content: "\f30b";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  padding-left: .5em;
+  padding-top: .09em;
+}
+
+/* Section: Newsletter */
 #newsletter {
   color: var(--clr-light2);
   display: flex;
@@ -324,7 +464,7 @@ nav li {
   background: var(--clr-light-hover);
 }
 
-/* Footer */
+/* Footer ----------------------------------------------------------------------*/
 #footer {
   display: flex;
   flex-direction: column;
@@ -435,110 +575,7 @@ div#social-media a {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-/* Our products */
-/* Our history */
-/* FAQ */
-
-/* Contact us */
-#contact-us {
-  color: var(--clr-light2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#contact-us>* {
-  width: 50%;
-}
-
-#contact-us h2 {
-  color: var(--clr-light);
-  font-size: 30px;
-}
-
-#contact-us h3 {
-  font-size: 23px;
-}
-
-#contact-us form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact-info {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-#contact-info>* {
-  width: 30%;
-}
-
-#contact-info>*,
-#sujet,
-#btn-envoyer {
-  padding: .6rem;
-  font-size: 12px;
-}
-
-#contact-us :is(h2, h3),
-#contact-info,
-#sujet {
-  margin-bottom: 1rem;
-}
-
-#sujet {
-  width: 100%;
-}
-
-#btn-envoyer {
-  display: flex;
-  justify-content: center;
-  width: 25%;
-  min-width: fit-content;
-  padding-top: 0.5em;
-  text-align: center;
-  /* font-size: 1em; */
-  font-size: 15px;
-  font-variant: all-petite-caps;
-  font-weight: 900;
-  border-radius: 5px;
-  background: var(--clr-light);
-  color: var(--clr-light2);
-  border: none;
-  outline: none;
-  box-shadow: 0 0.2rem #f8d096;
-  cursor: pointer;
-  transition: .4s;
-}
-
-#btn-envoyer:hover {
-  background: #b37e24;
-}
-
-#btn-envoyer::after {
-  content: "\f30b";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  padding-left: .5em;
-  padding-top: .09em;
-}
-
-#our-products,
-#our-history,
-#faq {
-  display: none;
-}
-
-/* Media queries */
+/* Media queries  ----------------------------------------------------------------------*/
 /*
   Mobile S - 320px
   Mobile M - 375px
@@ -599,8 +636,18 @@ div#social-media a {
 /* Tablet */
 @media (max-width:768px) {
 
-  #newsletter :is(h2, h3), #contact-us :is(h2, h3) {
+  #newsletter :is(h2, h3),
+  #contact-us :is(h2, h3),
+  #faq>h2 {
     font-size: 19px;
+  }
+
+  #faq h3 {
+    font-size: 16px;
+  }
+
+  #faq h4 {
+    font-size: 13px;
   }
 
   #newsletter input[type="text"] {
@@ -729,6 +776,14 @@ div#social-media a {
     height: 2rem;
     margin-left: 0;
   }
+
+  #faq {
+    padding: 0 2rem;
+  }
+
+  #faq ul {
+    height: 60rem;
+  }
 }
 
 /* Mobile M */
@@ -752,5 +807,9 @@ div#social-media a {
   #footer .footer-cols>* {
     flex-basis: 100%;
     padding: 0 2rem 1rem 2rem;
+  }
+
+  #faq ul {
+    height: 75rem;
   }
 }
