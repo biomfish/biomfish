@@ -276,13 +276,58 @@ section {
   margin: 3rem 0 1rem 0;
 }
 
-#our-products,
-#our-history {
+/* Section: Our products */
+#our-products {
   display: none;
 }
 
-/* Section: Our products */
 /* Section: Our history */
+#our-history {
+  color: var(--clr-light2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25rem;
+}
+
+#our-history-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 1.7rem;
+}
+
+#our-history h2 {
+  color: var(--clr-light);
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+#our-history img {
+  width: 300px;
+  margin: 4rem 3rem;
+  z-index: -1;
+}
+
+#our-history-img {
+  position: relative;
+}
+
+#our-history-img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  z-index: -1000;
+  background: rgb(255, 175, 56);
+  background: linear-gradient(-90deg, rgba(255, 175, 56, 1) 0%, rgba(109, 80, 42, 1) 31%, rgba(38, 34, 35, 1) 70%);
+}
+
 /* Section: FAQ */
 #faq {
   color: var(--clr-light2);
@@ -591,12 +636,14 @@ div#social-media a {
     padding: 0 25rem;
   }
 }
+
 /* between Laptop and Laptop L */
 @media (min-width:1024px) and (max-width:1439px) {
   #faq {
     padding: 0 16rem;
   }
 }
+
 /* Laptop L */
 @media (max-width:1440px) {
   .banner-text {
@@ -606,6 +653,10 @@ div#social-media a {
   nav {
     justify-content: center;
     font-size: 12.5px;
+  }
+
+  #our-history img {
+    width: 250px;
   }
 }
 
@@ -633,6 +684,18 @@ div#social-media a {
 
   #social-media>div {
     margin-right: 4rem;
+  }
+
+  #our-history {
+    padding: 0 15rem;
+  }
+
+  #our-history-info p {
+    font-size: 16px;
+  }
+
+  #our-history img {
+    width: 150px;
   }
 }
 
@@ -722,6 +785,10 @@ div#social-media a {
   #contact-us>* {
     width: 90%;
   }
+
+  #our-history {
+    padding: 0 7rem;
+  }
 }
 
 /* Mobile L */
@@ -794,6 +861,30 @@ div#social-media a {
 
   #faq ul {
     height: 60rem;
+  }
+
+  #our-history {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  #our-history-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  #our-history img {
+    width: 250px;
+  }
+
+  #our-history-img::before {
+    left: 0;
+    bottom: 0;
+    top: unset;
+    width: 100%;
+    height: 80%;
+    background: rgb(255, 175, 56);
+    background: linear-gradient(0deg, rgba(255, 175, 56, 1) 0%, rgba(109, 80, 42, 1) 31%, rgba(38, 34, 35, 1) 70%);
   }
 }
 
