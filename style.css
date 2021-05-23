@@ -141,6 +141,8 @@ nav>div {
 
 nav li {
   font-weight: 900;
+  padding-inline: 8px;
+  white-space: nowrap;
 }
 
 .text-logo {
@@ -269,25 +271,6 @@ nav li {
   font-size: 16px;
 }
 
-/* Media queries*/
-@media (max-width:1000px) {
-  #banner {
-    flex-direction: column;
-    height: unset;
-    align-items: center;
-  }
-
-  .banner-text {
-
-    padding-left: 0;
-  }
-
-  #banner>div {
-    margin: 1rem auto;
-  }
-
-}
-
 /* Newsletter */
 #newsletter {
   color: var(--clr-light2);
@@ -301,7 +284,6 @@ nav li {
 }
 
 #newsletter>* {
-  /* border: 1px solid yellow; */
   width: 100%;
   text-align: center;
   padding: .5rem;
@@ -400,15 +382,17 @@ nav li {
 div#social-media a {
   margin-inline: 1rem;
 }
-.icon{
+
+.icon {
   font-size: 30px;
-  width:1em;
-  height:1em;
-  place-items:center;
-  text-align:center;
-  position:relative;
-  cursor:pointer;
+  width: 1em;
+  height: 1em;
+  place-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
 }
+
 .icon::before {
   display: inline-block;
   font-style: normal;
@@ -417,49 +401,75 @@ div#social-media a {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Brands";
   font-weight: 400;
-  position:absolute;
-  display:grid;
-  place-items:center;
-  top:0;bottom:0;left:0;right:0;
-  border-radius:.3em;
-  color:white;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: .3em;
+  color: white;
 }
-.facebook::before{
+
+.facebook::before {
   content: "\f39e";
-  font-size:.8em;
-  background:#3b5998;
+  font-size: .8em;
+  background: #3b5998;
 }
-.twitter::before{
+
+.twitter::before {
   content: "\f099";
-  background:#08a0e9;
-  font-size:.6em;
+  background: #08a0e9;
+  font-size: .6em;
 }
-.pinterest::before{
+
+.pinterest::before {
   content: "\f231";
-  font-size:.8em;
+  font-size: .8em;
   background: #bd081c;
 }
-.instagram::before{
+
+.instagram::before {
   content: "\f16d";
-  font-size:.9em;
+  font-size: .9em;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-/* Media queries*/
-@media (max-width:1200px) {
+#our-products,
+#our-history,
+#faq,
+#contact-us {
+  display: none;
+}
+
+/* Media queries */
+/*
+  Mobile S - 320px
+  Mobile M - 375px
+  Mobile L - 425px
+  Tablet   - 768px
+  Laptop   - 1024px
+  Laptop L - 1440px
+  4k       - 2560px
+*/
+
+/* Laptop L */
+@media (max-width:1440px) {
   .banner-text {
     margin-top: -13rem;
   }
 
   nav {
     justify-content: center;
-    font-size: 12px;
+    font-size: 12.5px;
   }
 }
 
+/* Laptop */
 @media (max-width:1024px) {
   nav {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   #banner {
@@ -478,19 +488,21 @@ div#social-media a {
     margin: 1rem auto;
   }
 
-  #social-media>div{
+  #social-media>div {
     margin-right: 4rem;
   }
 }
 
-@media (min-width:740px) {
+/* Laptop or larger */
+@media (min-width:1024px) {
   #slideouts ul {
     opacity: 0 !important;
     pointer-events: none;
   }
 }
 
-@media (max-width:786px) {
+/* Tablet */
+@media (max-width:768px) {
 
   #newsletter :is(h2, h3) {
     font-size: 19px;
@@ -516,9 +528,7 @@ div#social-media a {
   .footer-cols :is(p, ul) {
     font-size: 15px;
   }
-}
 
-@media (max-width:740px) {
   nav {
     display: none;
   }
@@ -529,7 +539,6 @@ div#social-media a {
   }
 
   .banner-image img {
-    /* width: 100%; */
     width: 87%;
     margin: auto;
   }
@@ -558,12 +567,14 @@ div#social-media a {
   }
 }
 
+/* Mobile L */
 @media (max-width:425px) {
 
-  #footer{
-    padding-left:0;
+  #footer {
+    padding-left: 0;
     padding-right: 0;
   }
+
   .footer-cols {
     flex-wrap: wrap;
     padding: 0;
@@ -573,21 +584,22 @@ div#social-media a {
     flex-basis: 50%;
     padding: 0 2rem 1rem 2rem;
   }
-  #footer #social-media{
+
+  #footer #social-media {
     justify-content: center;
   }
-  #social-media>div{
+
+  #social-media>div {
     margin: 0;
   }
 }
 
+/* Mobile M */
 @media (max-width:375px) {
   .footer-cols>* {
     padding-right: 0;
   }
-}
 
-@media (max-width:360px) {
   .text-logo div {
     font-size: 1.6rem;
   }
@@ -598,6 +610,7 @@ div#social-media a {
 
 }
 
+/* Mobile S */
 @media (max-width:320px) {
   #footer .footer-cols>* {
     flex-basis: 100%;
