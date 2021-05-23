@@ -278,9 +278,8 @@ nav li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-top: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #newsletter>* {
@@ -312,7 +311,7 @@ nav li {
 #newsletter input[type="button"] {
   margin-left: .5rem;
   font-size: .9rem;
-  padding: 0 .2rem;
+  padding: 0 .5rem;
   background: var(--clr-light);
   color: var(--clr-light2);
   border: none;
@@ -436,10 +435,106 @@ div#social-media a {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
+/* Our products */
+/* Our history */
+/* FAQ */
+
+/* Contact us */
+#contact-us {
+  color: var(--clr-light2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#contact-us>* {
+  width: 50%;
+}
+
+#contact-us h2 {
+  color: var(--clr-light);
+  font-size: 30px;
+}
+
+#contact-us h3 {
+  font-size: 23px;
+}
+
+#contact-us form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#contact-info>* {
+  width: 30%;
+}
+
+#contact-info>*,
+#sujet,
+#btn-envoyer {
+  padding: .6rem;
+  font-size: 12px;
+}
+
+#contact-us :is(h2, h3),
+#contact-info,
+#sujet {
+  margin-bottom: 1rem;
+}
+
+#sujet {
+  width: 100%;
+}
+
+#btn-envoyer {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  min-width: fit-content;
+  padding-top: 0.5em;
+  text-align: center;
+  /* font-size: 1em; */
+  font-size: 15px;
+  font-variant: all-petite-caps;
+  font-weight: 900;
+  border-radius: 5px;
+  background: var(--clr-light);
+  color: var(--clr-light2);
+  border: none;
+  outline: none;
+  box-shadow: 0 0.2rem #f8d096;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#btn-envoyer:hover {
+  background: #b37e24;
+}
+
+#btn-envoyer::after {
+  content: "\f30b";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  padding-left: .5em;
+  padding-top: .09em;
+}
+
 #our-products,
 #our-history,
-#faq,
-#contact-us {
+#faq {
   display: none;
 }
 
@@ -504,7 +599,7 @@ div#social-media a {
 /* Tablet */
 @media (max-width:768px) {
 
-  #newsletter :is(h2, h3) {
+  #newsletter :is(h2, h3), #contact-us :is(h2, h3) {
     font-size: 19px;
   }
 
@@ -565,6 +660,10 @@ div#social-media a {
   #contact-message {
     padding: .5rem;
   }
+
+  #contact-us>* {
+    width: 90%;
+  }
 }
 
 /* Mobile L */
@@ -591,6 +690,44 @@ div#social-media a {
 
   #social-media>div {
     margin: 0;
+  }
+
+  #contact-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+  }
+
+  #contact-info>* {
+    width: 100%;
+    height: 2rem;
+  }
+
+  #btn-envoyer {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  #newsletter input[type="text"] {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  #newsletter input[type="button"] {
+    width: 90%;
+    font-weight: 900;
+    border-radius: 5px;
+    background: var(--clr-light);
+    color: var(--clr-light2);
+    border: none;
+    outline: none;
+    box-shadow: 0 0.2rem #f8d096;
+    cursor: pointer;
+    transition: .4s;
+    padding: .5rem 0 .5rem 0;
+    height: 2rem;
+    margin-left: 0;
   }
 }
 
