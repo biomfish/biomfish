@@ -11,14 +11,23 @@ rightMenuIcon.addEventListener('click', () =>
     ToggleMenu(rightSlideoutMenu, leftSlideoutMenu)
 )
 
+leftSlideoutMenu.querySelectorAll("a").forEach(el => {
+    el.addEventListener("click", () =>
+        hide(leftSlideoutMenu)
+    )
+})
+
 let ToggleMenu = (target, other) => {
-    other.style.opacity = '0';
-    other.style.pointerEvents = 'none';
+    hide(other)
     if (target.style.opacity == "1") {
-        target.style.opacity = '0';
-        target.style.pointerEvents = 'none';
+        hide(target)
     } else {
         target.style.opacity = '1';
         target.style.pointerEvents = 'auto';
     }
+}
+
+let hide = (target) => {
+    target.style.opacity = '0';
+    target.style.pointerEvents = 'none';
 }
