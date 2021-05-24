@@ -216,6 +216,7 @@ nav li {
   justify-content: space-between;
   align-items: center;
   background: var(--clr-nav);
+  z-index: 100;
 }
 
 #slideouts>div {
@@ -273,7 +274,7 @@ nav li {
 
 /* Sections ----------------------------------------------------------------------*/
 section {
-  margin: 3rem 0 1rem 0;
+  padding-top: 100px !important;
 }
 
 /* Section: Our products */
