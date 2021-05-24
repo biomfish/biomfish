@@ -29,13 +29,13 @@ body {
 a.disabled {
   list-style: none;
   text-decoration: none;
-  color: gray;
+  color: gray !important;
   pointer-events: none;
 }
 
 #social-media a.disabled div::before {
   background: unset;
-  background-color: gray;
+  background-color: gray !important;
 }
 
 /* Banner ----------------------------------------------------------------------*/
