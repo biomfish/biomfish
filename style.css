@@ -19,6 +19,10 @@
   margin: 0;
   padding: 0;
 }
+html{
+  overflow-y:scroll;
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--clr-dark-best);
