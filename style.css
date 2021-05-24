@@ -597,6 +597,7 @@ section {
   outline: none;
   border-radius: 2px;
   box-shadow: 0 .2rem #f8d096;
+  cursor:pointer;
 }
 
 #newsletter input[type="button"]:hover {
